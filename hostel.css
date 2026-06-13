@@ -1,0 +1,442 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f6fa;
+    color:#111;
+}
+
+header{
+    width:100%;
+    padding:20px 7%;
+    background:#04152d;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+}
+
+.logo i{
+    font-size:32px;
+    color:#ffcc29;
+}
+
+.logo h2{
+    font-size:28px;
+}
+
+.logo p{
+    font-size:12px;
+    color:#ccc;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffcc29;
+}
+
+.book-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#ffcc29;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:0 7%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero-content span{
+    color:#ffcc29;
+}
+
+.hero-content p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.yellow-btn,
+.dark-btn{
+    padding:15px 28px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.yellow-btn{
+    border:none;
+    background:#ffcc29;
+}
+
+.dark-btn{
+    border:1px solid white;
+    background:transparent;
+    color:white;
+}
+
+.yellow-btn:hover,
+.book-btn:hover{
+    transform:translateY(-3px);
+}
+
+.features{
+    width:86%;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    margin-top:-60px;
+    position:relative;
+    z-index:10;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.feature-box i{
+    font-size:30px;
+    color:#04152d;
+}
+
+.feature-box p{
+    color:#666;
+    font-size:14px;
+}
+
+.rooms{
+    padding:100px 7%;
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr 1fr;
+    gap:25px;
+}
+
+.tag{
+    background:#ffcc29;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.room-left h2,
+.about-content h2,
+.review-title h2,
+.facility-title h2{
+    font-size:50px;
+    margin:25px 0;
+    line-height:1.2;
+}
+
+.line{
+    width:90px;
+    height:4px;
+    background:#ffcc29;
+    margin-bottom:25px;
+}
+
+.room-left p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.room-left .dark-btn{
+    background:#04152d;
+    color:white;
+    border:none;
+}
+
+.room-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.07);
+}
+
+.room-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.room-content{
+    padding:22px;
+}
+
+.room-content h4{
+    margin:12px 0;
+}
+
+.room-content span{
+    color:#666;
+    font-size:14px;
+}
+
+.room-content ul{
+    margin:20px 0;
+    padding-left:20px;
+    color:#555;
+    line-height:2;
+}
+
+.availability{
+    background:#dff5df;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+    color:#2c7c2c;
+    font-weight:600;
+}
+
+.about{
+    margin:0 7% 100px;
+    background:#04152d;
+    border-radius:25px;
+    overflow:hidden;
+    color:white;
+    display:grid;
+    grid-template-columns:1.2fr 1fr 0.8fr;
+}
+
+.about-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.about-content{
+    padding:60px 40px;
+}
+
+.about-content p{
+    color:#ddd;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.about-stats{
+    padding:60px 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:25px;
+}
+
+.stat-box{
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    padding-bottom:20px;
+}
+
+.stat-box h2{
+    color:#ffcc29;
+    font-size:42px;
+}
+
+.facilities{
+    padding:0 7% 100px;
+    display:grid;
+    grid-template-columns:1.4fr repeat(8,1fr);
+    gap:20px;
+    align-items:center;
+}
+
+.facility-box{
+    background:white;
+    border-radius:18px;
+    padding:30px 15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.facility-box i{
+    font-size:34px;
+    margin-bottom:15px;
+    color:#04152d;
+}
+
+.reviews{
+    padding:0 7% 100px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr 1fr;
+    gap:25px;
+}
+
+.review-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    gap:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.review-card img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.review-card p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+footer{
+    background:#04152d;
+    color:white;
+    padding:80px 7%;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-box p,
+.footer-box a{
+    color:#ccc;
+    line-height:2;
+    text-decoration:none;
+    display:block;
+}
+
+.footer-box h3{
+    margin-bottom:20px;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social-icons i{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.3);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons i:hover{
+    background:#ffcc29;
+    color:black;
+}
+
+@media(max-width:1100px){
+
+    nav{
+        display:none;
+    }
+
+    .features,
+    .rooms,
+    .reviews,
+    .facilities,
+    .about,
+    footer{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .room-left h2,
+    .about-content h2,
+    .review-title h2,
+    .facility-title h2{
+        font-size:38px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .review-card{
+        flex-direction:column;
+    }
+
+}
